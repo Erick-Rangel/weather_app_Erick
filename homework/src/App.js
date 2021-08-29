@@ -11,27 +11,26 @@ function App() {
     if (data?.length > 2) {
       alert("No puedes agregar más ciudades.");
     } else {
-
       fetchCity(ciudad, setData);
     }
-  } 
+  }
 
   function handleOnClose(id) {
     setData((prevData) => {
-     return prevData.filter((city) => city.id !== id);
+      return prevData.filter((city) => city.id !== id);
     });
   }
 
   return (
-    <div>
-      <div className={styles.app}>
-        <div className={styles.bkg} />
-        <div className={styles.container}>
-          <div>
-            <SearchBar onSearch={onSearch} />
-          </div>
-          <div className={styles.citiesContainer}>
-            {data.length > 0 && (
+    <div className={styles.app}>
+      <div className={styles.bkg} />
+      <div className={styles.container}>
+        <div>
+          <SearchBar onSearch={onSearch} />
+        </div>
+        <div className={styles.citiesContainer}>
+          {data.length > 0 ? (
+            <>
               <Card
                 primary
                 max={data[data?.length - 1].max}
@@ -39,9 +38,20 @@ function App() {
                 name={data[data?.length - 1].name}
                 img={data[data?.length - 1].img}
               />
-            )}
-            <Cards cities={data} onClose={handleOnClose} />
-          </div>
+              <Cards cities={data} onClose={handleOnClose} />
+            </>
+          ) : (
+            <span
+              style={{
+                textAlign: "center",
+                width: "70vw",
+                margintop: "1rem",
+                fontSize: "2rem",
+              }}
+            >
+              Agregar una nueva ciudad
+            </span>
+          )}
         </div>
       </div>
     </div>

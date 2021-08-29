@@ -1,22 +1,21 @@
-import React from 'react';
-import Card from './Card';
-import styles from "./Cards.module.css"
+import React from "react";
+import Card from "./Card";
+import styles from "./Cards.module.css";
 
-export default function Cards({cities, onClose}) {
+export default function Cards({ cities, onClose }) {
   // acá va tu código
-    return (
-      <div className={styles.cards}>
-        {cities.map((city) =>(
-          <Card
-          key= {city.id}
-          name = {city.name}
+  return (
+    <div className={styles.cards}>
+      {cities.map((city) => (
+        <Card
+          key={city.id}
+          name={city.name}
           min={city.min}
           max={city.max}
           img={city.img}
-          onClose={()=> onClose(city.id)}
-          />
-        ))}
-      </div>
-    );
-  
-};
+          onClose={() => onClose(city.id)}
+        />
+      ))}
+    </div>
+  );
+}

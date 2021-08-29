@@ -7,36 +7,36 @@
   color: #ffffffff;
   height: 20vh;
 }
-.card + .card{
-    border-left: solid 1px #64646478;
+.card + .card {
+  border-left: solid 1px #64646478;
 }
-.card>img{
-    width: 5rem;
-    height: 5rem;
+.card > img {
+  width: 5rem;
+  height: 5rem;
 }
 
-.primary{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 5vh 15vh;
-width: 20rem;
-padding: 0 0.5rem;
+.primary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5vh 15vh;
+  width: 20rem;
+  padding: 0 0.5rem;
 }
-.primary > span{
-    margin-top: 00.25rem;
-    grid-column: 1 / span 2;
+.primary > span {
+  margin-top: 00.25rem;
+  grid-column: 1 / span 2;
 }
-.primary> img{
-    width: 8rem;
-    height: 8rem;
+.primary > img {
+  width: 8rem;
+  height: 8rem;
 }
-.name{
-    background-color: #0000005e;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
+.name {
+  background-color: #0000005e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 .temp {
@@ -47,15 +47,15 @@ padding: 0 0.5rem;
   text-align: center;
 }
 
-.temp + .temp{
-    margin-left: 0.5rem;
+.temp + .temp {
+  margin-left: 0.5rem;
 }
 
 .temps {
   display: flex;
 }
 
-.button{
+.button {
   border: solid 2px transparent;
   border-radius: 9999px;
   display: flex;
@@ -69,8 +69,8 @@ padding: 0 0.5rem;
   cursor: pointer;
   color: #ffffff;
   margin-left: 0.5rem;
-  margin-right: -0.5rem; 
-  }
+  margin-right: -0.5rem;
+}
 .button:hover {
   background-color: #ffffff60;
   color: #f8485e;
